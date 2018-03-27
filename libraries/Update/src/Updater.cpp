@@ -308,10 +308,10 @@ size_t UpdateClass::writeStream(Stream &data) {
     if(hasError() || !isRunning())
         return 0;
 
-    if(!_verifyHeader(data.peek())) {
+/*    if(!_verifyHeader(data.peek())) {
         _reset();
         return 0;
-    }
+    }*/
     if (_progress_callback) {
         _progress_callback(0, _size);
     }
